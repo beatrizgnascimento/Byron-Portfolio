@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Setup e utilidades */
+
+:root {
+  --clr-primary: #e02d2d;
+  --clr-black: #191919;
+  --clr-white: #eef2f5;
+
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--clr-black);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: var(--clr-primary);
+  width: fit-content;
+
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+
+  font-size: 14px;
+  color: var(--clr-white);
+  text-decoration: none;
+
+  transition: transform 150ms;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bg-dark {
+  background-color: var(--clr-black);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem 1.5rem;
+}
+
+section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+header nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--clr-white);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header nav {
+    display: flex;
+  }
+}
+
+/* Home */
+
+#home {
+  justify-content: center;
+
+  padding: 0;
+
+  height: 700px;
+}
+
+.home-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+
+  height: 400px;
+  padding-inline: 1.5rem;
+
+  background-image: url("/assets/img/darth-mobile.png");
+  background-repeat: no-repeat;
+  background-position: rem;
+  background-size: 300px;
+}
+
+#home > img {
+  display: none;
+}
+
+.home-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.home-heading > h1 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 500;
+
+  margin: 0;
+}
+
+.home-heading > p {
+  line-height: 150%;
+
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  #home {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #home > img {
+    display: block;
+
+    width: 444px;
+    height: 444px;
+  }
+
+  .home-cta {
+    background: none;
+  }
+}
+
+/* Sobre */
+
+#sobre {
+  gap: 1rem;
+
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.mobile-sobre > img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.sobre-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  width: 100%;
+}
+
+.desktop-sobre {
+  display: none;
+}
+
+.desktop-sobre img {
+  border-radius: 12px;
+
+  max-width: 460px;
+}
+
+.sobre-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-sobre {
+    display: none;
+  }
+
+  .desktop-sobre {
+    display: flex;
+    gap: 92px;
+  }
+
+  .desktop-sobre h2 {
+    margin: 0;
+  }
+}
+
+/* Projetos */
+
+#projetos {
+  gap: 1.5rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 1.25rem;
+  border-radius: 4px;
+  max-width: 250px;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card > h3 {
+  font-weight: 18px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  #projetos {
+    align-items: center;
+  }
+
+  .cards-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Serviços e conhecimentos */
+
+#servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.base-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.base-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background-color: var(--clr-primary);
+
+  border-radius: 3px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.servicos-list {
+  gap: 1rem;
+}
+
+.conhecimentos-list {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.conhecimentos-list > li {
+  width: 72px;
+  height: 72px;
+}
+
+.conhecimentos-list > li > img {
+  width: 72px;
+}
+
+@media screen and (min-width: 1024px) {
+  #servicos {
+    flex-direction: row;
+  }
+
+  #servicos > div {
+    flex-basis: 50%;
+  }
+
+  .servicos-list {
+    flex-direction: column;
+  }
+
+  .servicos-list > li {
+    justify-content: start;
+    height: 64px;
+    max-width: 320px;
+  }
+}
+
+/* Contato */
+
+#contato {
+  gap: 3rem;
+
+  padding-block: 4rem;
+}
+
+#contato > h2 {
+  margin: 0;
+}
+
+#contato > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#contato > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 2rem;
+}
+
+#contato a {
+  color: var(--clr-black);
+  text-decoration: none;
+}
+
+#contato > cite {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  #contato {
+    align-items: center;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-block: 1.5rem;
+
+  background-color: var(--clr-primary);
+}
+
+footer > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+footer img {
+  height: 24px;
+}
